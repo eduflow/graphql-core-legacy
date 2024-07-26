@@ -24,8 +24,7 @@ def test_asyncio_executor():
         asyncio.sleep(0.001)
         return "hey"
 
-    @asyncio.coroutine
-    def resolver_2(context, *_):
+    async def resolver_2(context, *_):
         # type: (Optional[Any], *ResolveInfo) -> str
         asyncio.sleep(0.003)
         return "hey2"
@@ -58,8 +57,7 @@ def test_asyncio_executor_custom_loop():
         asyncio.sleep(0.001, loop=loop)
         return "hey"
 
-    @asyncio.coroutine
-    def resolver_2(context, *_):
+    async def resolver_2(context, *_):
         # type: (Optional[Any], *ResolveInfo) -> str
         asyncio.sleep(0.003, loop=loop)
         return "hey2"
