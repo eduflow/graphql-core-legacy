@@ -34,7 +34,7 @@ tests_requires = [
     "pytest-cov==2.8.1",
     "coveralls==1.11.1",
     "cython==0.29.17",
-    "gevent==1.5.0",
+    "gevent>=23.9.0",
     "pytest-benchmark==3.2.3",
     "pytest-mock==2.0.0",
 ]
@@ -86,6 +86,6 @@ setup(
     install_requires=install_requires,
     tests_require=tests_requires,
     cmdclass={"test": PyTest},
-    extras_require={"gevent": ["gevent>=1.1"], "test": tests_requires},
+    extras_require={"gevent": ["gevent>=23.9.0"], "test": tests_requires},
     package_data={"graphql": ["py.typed"]},
 )
