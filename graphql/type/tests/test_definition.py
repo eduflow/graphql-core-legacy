@@ -1,5 +1,5 @@
 from collections import OrderedDict
-from py.test import raises
+from pytest import raises
 
 from graphql.type import (
     GraphQLArgument,
